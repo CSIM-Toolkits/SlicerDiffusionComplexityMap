@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<executable>
+  <category>Diffusion.Quantify</category>
+  <title>Diffusion Complexity Map</title>
+  <description><![CDATA[This is a CLI module that calculates the Diffusion Complexity Map from a raw DWI image sequence.]]></description>
+  <version>0.0.1</version>
+  <documentation-url>https://github.com/CSIM-Toolkits/SlicerDiffusionComplexityMap</documentation-url>
+  <license>Slicer</license>
+  <contributor>Antonio Carlos Senra Filho (University of Campinas), Andre Monteiro Paschoal (University of Campinas), Luiz Otavio Murta Junior (University of Sao Paulo)</contributor>
+  <acknowledgements>This work was funded by University of Campinas (Unicamp)</acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description><![CDATA[Input/output parameters]]></description>
+    <image type="diffusion-weighted">
+      <name>inputVolume</name>
+      <label>Input DWI Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description><![CDATA[Input DWI sequence volume. (Tip: Use DWiConvert module to create an NRRD DWI sequence file from other image file types)]]></description>
+    </image>
+    <image type="label">>
+      <name>maskVolume</name>
+      <label>Brain Mask</label>
+      <channel>input</channel>
+      <index>1</index>
+      <description><![CDATA[Brain mask volume informing the image regions that should be assumed as the total image space were the complexity calculations should be made. If left blank, the entire input image will be used as input.]]></description>
+    </image>
+    <image>
+      <name>outputVolume</name>
+      <label>DC Mapping</label>
+      <channel>output</channel>
+      <index>2</index>
+      <description><![CDATA[Output Volume representing the Diffusion Complexity (DC) map.]]></description>
+    </image>
+  </parameters>
+  <parameters>
+    <label>Additional Parameters</label>
+    <description><![CDATA[Specific parameters to tune the complexity function calculation.]]></description>
+    <string-enumeration>
+      <name>desiquilibriumFunction</name>
+        <longflag>--diseq</longflag>
+        <description><![CDATA[A set of disequilibrium functions that could be used. (Tip: The LMC complexity measure uses the Euclidean function)]]></description>
+        <label>Disequilibrium Function</label>
+        <default>Euclidean</default>
+        <element>Euclidean</element>
+        <element>Wooter</element>
+   	    <element>Kullback-Leiber</element>
+	      <element>Jensen</element>
+    </string-enumeration>
+    <double>
+      <name>q</name>
+      <longflag>--qvalue</longflag>
+      <flag>q</flag>
+      <label>Q Value</label>
+      <description><![CDATA[A double value that defines the q-Statistics probability distribution function which is used in the image entropy calculation. For Q=1, the Shannon's entropy function is adopted (default).]]></description>
+      <default>1.0</default>
+      <constraints>
+        <minimum>0.01</minimum>
+        <maximum>1.99</maximum>
+        <step>0.01</step>
+      </constraints>
+    </double>
+    <boolean>
+      <name>useManualNumberOfBins</name>
+      <longflag>--useManualBins</longflag>
+      <description><![CDATA[Choose if you want to use set manually the number of bins to represent the diffusion histogram estimate. If not, an automatic adjustment is adopted.]]></description>
+      <label>Use Manual Number of Bins</label>
+	    <default>false</default>
+    </boolean>
+    <integer>
+      <name>numberOfBins</name>
+      <longflag>--numBins</longflag>
+      <flag>i</flag>
+      <label>Number of Bins</label>
+      <description><![CDATA[A integer value that defines the number of bins used in the histogram estimate. This parameter is used only when the --useManualBins is True]]></description>
+      <default>60</default>
+      <constraints>
+        <minimum>4</minimum>
+        <maximum>500</maximum>
+        <step>1</step>
+      </constraints>
+    </integer>
+  </parameters>
+</executable>
