@@ -15,13 +15,13 @@ The full documentation of the usage, implementation and updates in the `dc` map 
 The `Diffusion Complexity` extension is a simple way to collect the `dc` map using a GUI interface. The images below represents some examples in comparison with the classical FA and ADC maps for DTI images:
 
 ![FA map](assets/FA_diff_example.png){ width="300" .center}
-A CBF map example, using multi PLD ASL imaging acquisition
+A FA map example
 
 ![ADC map](assets/ADC_diff_example.png){ width="300" .center}
-A ATT map example, using multi PLD ASL imaging acquisition
+A ADC map example
 
 ![DC map](assets/DC_diff_example.png){ width="300" .center}
-A T1 blood-GM map example, using the Multi TE ASL imaging acquisition
+A DC map example
 
 
 ## Modules
