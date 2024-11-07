@@ -1,6 +1,7 @@
-# ASLtk - Arterial Spin Labeling toolkit
+# Diffusion Complexity Mapping
 
-![project logo](assets/DiffusionComplexityMap.png){ width="350" .center}
+![project logo](assets/DiffusionComplexityMap.png){ width="250" .center}
+
 Welcome to the Diffusion Complexity Mapping!
 
 This 3D Slicer extension was designed to assist users in processing Diffusion Tensor Imaging (DTI) for the `Diffusion Complexity` mapping (`dc`). 
