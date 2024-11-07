@@ -1,49 +1,42 @@
 # ASLtk - Arterial Spin Labeling toolkit
 
-![project logo](assets/asltk-logo.png){ width="350" .center}
-Welcome to the ASL toolkit!
+![project logo](assets/DiffusionComplexityMap.png){ width="350" .center}
+Welcome to the Diffusion Complexity Mapping!
 
-This 3D Slicer extension was designed to assist users in processing Arterial Spin Labeling (ASL) MRI images, from basic imaging protocols to the state-of-the-art models provided in the scientific literature.
+This 3D Slicer extension was designed to assist users in processing Diffusion Tensor Imaging (DTI) for the `Diffusion Complexity` mapping (`dc`). 
 
-The major objective of this project is to give an open-source alternative to researchers in the MRI field.
 
-The full documentation of the usage, implementation and updates in the `asltk` library is given in this repository and posted online using a [web-based host](https://asltk.readthedocs.io/en/main/). 
+The full documentation of the usage, implementation and updates in the `dc` map is given in this repository and posted online using a [web-based host](https://slicerdiffusioncomplexitymap.readthedocs.io/en/latest/). 
 
 
 ## Output examples
 
-The ASLtoolkit extension is a simple way to collect ASL quantitatve output mappings using a GUI interface. The images below represents some examples:
+The `Diffusion Complexity` extension is a simple way to collect the `dc` map using a GUI interface. The images below represents some examples in comparison with the classical FA and ADC maps for DTI images:
 
-![CBF map](assets/cbf_map.png){ width="300" .center}
+![FA map](assets/FA_diff_example.png){ width="300" .center}
 A CBF map example, using multi PLD ASL imaging acquisition
 
-![ATT map](assets/att_map.png){ width="300" .center}
+![ADC map](assets/ADC_diff_example.png){ width="300" .center}
 A ATT map example, using multi PLD ASL imaging acquisition
 
-![T1 blood-GM map](assets/t1_blood_gm_map.png){ width="300" .center}
+![DC map](assets/DC_diff_example.png){ width="300" .center}
 A T1 blood-GM map example, using the Multi TE ASL imaging acquisition
 
 
 ## Modules
 
-### CBF ATT
+### Diffusion Complexity map
 
-This module is able to reconstruct the `CBF` and `ATT` maps from a ASL imaging acquisition.
+This module is able to reconstruct the `Diffusion Complexity`  map from a standard Diffusion-Weighted MRI imaging acquisition.
 
-### Multi TE ASL
-
-This module is able to reconstruct the `T1 blood-GM` map from a multi echos (TE) ASL imaging acquisition.
-
-## How to use
-
-The `ASLtoolkit` extension can be used directly from the modules in the 3D Slicer module list. Hence, the user can select the required information and also start the mapping calculation. When it is finished, the data is loaded in the Slicer scene viewer.
 
 ## Cite this tool
 
-We hope that the `ASLtoolkit` can be helpful for your applications. If possible, recall to cite at least one of the following publications:
+We hope that the `Diffusion Complexity` can be helpful for your applications. If possible, recall to cite at least one of the following publications:
 
-* Senra Filho, A. C. ; Paschoal, A. M. "Open-Source Multi-Echo (TE) MRI Tool for Arterial Spin Labelling Imaging Protocols". ISMRM & ISMRT Annual Meeting (2025)
+* da S. Senra Filho, A., Murta Junior, L. & Monteiro Paschoal, A. Assessing biological self-organization patterns using statistical complexity characteristics: a tool for diffusion tensor imaging analysis. Magn Reson Mater Phy (2024). [DOI link](http://dx.doi.org/10.1007/s10334-024-01185-4)
+
 
 ## License
 
-This project is under MIT license and following details are given at the [LICENSE](https://github.com/LOAMRI/Slicer-ASLtoolkit/blob/main/LICENSE) file in the project repository.
+This project is under MIT license and following details are given at the [LICENSE](https://github.com/CSIM-Toolkits/SlicerDiffusionComplexityMap/blob/main/LICENSE) file in the project repository.
