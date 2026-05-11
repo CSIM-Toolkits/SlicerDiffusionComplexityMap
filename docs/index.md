@@ -9,6 +9,23 @@ This 3D Slicer extension was designed to assist users in processing Diffusion Te
 
 The full documentation of the usage, implementation and updates in the `dc` map is given in this repository and posted online using a [web-based host](https://slicerdiffusioncomplexitymap.readthedocs.io/en/latest/). 
 
+## Installation
+
+You can install the **Diffusion Complexity** extension directly within 3D Slicer using the following methods:
+
+### 1. Via the 3D Slicer Extension Manager (Recommended)
+
+1. Open **3D Slicer**.
+2. Navigate to the **Extension Manager** by clicking the blue box icon in the toolbar (or go to `View` > `Extension Manager`).
+3. Click on the **Install Extensions** tab.
+4. Use the search bar in the top right and type **"Diffusion Complexity"**.
+5. Click **Install**.
+6. Restart 3D Slicer when prompted to finalize the installation.
+
+### 2. Via the Web Index
+
+You can also browse the extension details and manual download options at the [3D Slicer Extension Catalog](https://extensions.slicer.org/).
+
 
 ## Output examples
 
