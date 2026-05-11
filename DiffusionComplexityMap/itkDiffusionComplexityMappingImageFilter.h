@@ -51,10 +51,10 @@ public:
     typedef SmartPointer< const Self >                            ConstPointer;
 
     /** Method for creation through the object factory. */
-    itkNewMacro(Self)
+    itkNewMacro(Self);
 
     /** Run-time type information (and related methods). */
-    itkTypeMacro(DiffusionComplexityMappingImageFilter, ImageToImageFilter)
+    itkTypeMacro(DiffusionComplexityMappingImageFilter, ImageToImageFilter);
 
     typedef typename InputImageType::PixelType                  InputPixelType;
     typedef typename OutputImageType::PixelType                 OutputPixelType;
@@ -65,27 +65,27 @@ public:
     void SetDiffusionSpace(const TInputMask* mask);
 
     /** Set the q value used in the entropy calculation. */
-    itkSetMacro(QValue, float)
+    itkSetMacro(QValue, float);
 
     /** Choose if define the number of bins manually. */
-    itkBooleanMacro(UseManualNumberOfBins)
-    itkSetMacro(UseManualNumberOfBins, bool)
+    itkBooleanMacro(UseManualNumberOfBins);
+    itkSetMacro(UseManualNumberOfBins, bool);
 
     /** Set the number of bins used in the entropy calculation. */
-    itkSetMacro(HistogramBins, unsigned int)
+    itkSetMacro(HistogramBins, unsigned int);
 
     /** Debug mode is used to inform some messages in the standard output. */
-    itkBooleanMacro(DebugMode)
-    itkSetMacro(DebugMode, bool)
+    itkBooleanMacro(DebugMode);
+    itkSetMacro(DebugMode, bool);
 
     /** Set the disequilibrium function used in the complexity calculation. */
-    itkSetMacro(DisequilibriumFunction, unsigned char)
+    itkSetMacro(DisequilibriumFunction, unsigned char);
 
-    itkGetMacro(QValue, float)
-    itkGetMacro(HistogramBins, unsigned int)
-    itkGetMacro(UseManualNumberOfBins, bool)
-    itkGetMacro(DisequilibriumFunction, unsigned char)
-    itkGetMacro(DebugMode, bool)
+    itkGetMacro(QValue, float);
+    itkGetMacro(HistogramBins, unsigned int);
+    itkGetMacro(UseManualNumberOfBins, bool);
+    itkGetMacro(DisequilibriumFunction, unsigned char);
+    itkGetMacro(DebugMode, bool);
 
 #ifdef ITK_USE_CONCEPT_CHECKING
     // Begin concept checking
